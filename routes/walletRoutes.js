@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const axios = require('axios');
 
-
 const walletEndpoint = "https://legend.lnbits.com/api/v1/wallet";
 
 // GET /wallet
@@ -9,7 +8,6 @@ router.get('/', (req, res) => {
     axios.get(walletEndpoint, { headers: {'X-api-key': process.env.ADMIN_KEY}})
         .then(response => {
         let wallet = response.data; // {name: 'Music', balance: 80000 }
-        console.log(wallet);
 
     // write this response to our server or our file system?
     // writing to file is asynchronous therefore needs a callback
@@ -24,7 +22,5 @@ router.get('/', (req, res) => {
     console.log(error);
 })
 })
-
-
 
 module.exports = router;

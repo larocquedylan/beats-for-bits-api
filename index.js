@@ -1,7 +1,6 @@
 // install dependcies
 const express = require('express');
 const app = express();
-const axios = require('axios');
 const cors = require('cors');
 require('dotenv').config();
 app.use(cors()); // enable CORS - do I need to make this only available for my client?
@@ -14,7 +13,7 @@ const walletRoutes = require('./routes/walletRoutes');
 const songsRoutes = require('./routes/songsRoutes');
 
 app.use("/wallet", walletRoutes);
-app.use('/songs', songsRoutes);
+app.use("/songs", songsRoutes);
 
 app.get("/", (req,res) => {
     res.send("hello");
