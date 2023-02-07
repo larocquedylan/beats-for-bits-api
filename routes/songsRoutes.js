@@ -9,20 +9,21 @@ router.get('/', (req, res) => {
 })
 
 const songList = [
-    { name: '1.22G2', path: './public/songs/1.wav' },
-    { name: '1.22O3', path: './public/songs/2.wav' },
-    { name: '1.22S1', path: './public/songs/3.wav' },
-    { name: '2.6.23', path: './public/songs/4.wav' },
-    { name: '3.22H1', path: './public/songs/5.wav' },
-    { name: '3.22J1', path: './public/songs/6.wav' },
-    { name: '11.21U1', path: './public/songs/7.wav' },
-    { name: '12.21E', path: './public/songs/8.wav' },
-    { name: 'May25', path: './public/songs/9.wav' },
+    { name: '122G2.wav', path: './public/songs/1.wav' },
+    { name: '122O3.wav', path: './public/songs/2.wav' },
+    { name: '122S1.wav', path: './public/songs/3.wav' },
+    { name: '2623.wav', path: './public/songs/4.wav' },
+    { name: '322H1.wav', path: './public/songs/5.wav' },
+    { name: '322J1.wav', path: './public/songs/6.wav' },
+    { name: '1121U1.wav', path: './public/songs/7.wav' },
+    { name: '1221E.wav', path: './public/songs/8.wav' },
+    { name: 'May25.wav', path: './public/songs/9.wav' },
   ];
   
 router.get("/:name", (req, res) => {
     const filename = req.params.name;
     const song = songList.find(song => song.name === filename);
+    console.log(filename);
 
     if (!song) {
         return res.status(404).json({ error: 'File not found hoe!' });
