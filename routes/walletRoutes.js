@@ -1,6 +1,6 @@
-const express = require("express");
-const router = express.Router();
+const router = require("express").Router();
 const axios = require('axios');
+
 
 const walletEndpoint = "https://legend.lnbits.com/api/v1/wallet";
 
@@ -24,5 +24,7 @@ router.get('/', (req, res) => {
     console.log(error);
 })
 })
+
+
 
 module.exports = router;

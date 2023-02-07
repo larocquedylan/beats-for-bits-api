@@ -10,20 +10,11 @@ app.use(express.static("./public" )); // serve pictures for gallery, and songs? 
 
 const PORT = process.env.PORT || 5050;
 
-
 const walletRoutes = require('./routes/walletRoutes');
+const songsRoutes = require('./routes/songsRoutes');
 
 app.use("/wallet", walletRoutes);
-
-// app.get("/songs", (req,res) => {
-//     console.log(1);
-//     // get some data from either a json or a database
-
-//     res.json([
-//         {id: 1, title: "song1", filetype: "wav"},
-//         {id: 2, title: "song2", filetype: "wav"}
-//     ])
-// })
+app.use('/songs', songsRoutes);
 
 app.get("/", (req,res) => {
     res.send("hello");
