@@ -19,7 +19,6 @@ router.get('/', (req, res) => {
     // send this response to our front-end api call
     res.json(wallet); // returns in the response to our client
 
-
 })
 .catch(error => {
     console.log(error);
