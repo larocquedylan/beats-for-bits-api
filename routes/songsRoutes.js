@@ -1,38 +1,53 @@
 const express = require("express");
+const res = require("express/lib/response");
 const router = express.Router();
 
 const fs = require('fs');
 const path = require('path');
 
+router.use(express.json());
+
+// get all songs endpoint for gallery
 router.get('/', (req, res) => {
-    res.send("hello"); // returns in the response to our client
+    const songs = getSongs();
+
+    const songList = songs.map(({id, title, song, image,alt }) => {
+        return {id, title, song, image, alt};
+    })
+
+    res.status(200).json(songList);
 })
 
-const songList = [
-    { name: '122G2.wav', path: './public/songs/1.wav' },
-    { name: '122O3.wav', path: './public/songs/2.wav' },
-    { name: '122S1.wav', path: './public/songs/3.wav' },
-    { name: '2623.wav', path: './public/songs/4.wav' },
-    { name: '322H1.wav', path: './public/songs/5.wav' },
-    { name: '322J1.wav', path: './public/songs/6.wav' },
-    { name: '1121U1.wav', path: './public/songs/7.wav' },
-    { name: '1221E.wav', path: './public/songs/8.wav' },
-    { name: 'May25.wav', path: './public/songs/9.wav' },
-  ];
+// get a specific song for details page
+router.get('/:id', (req, res) => {
+    const songs = getSongs();
+    const songId = req.params.id;
+
+    const song = songs.find((song => song.id === songId))
+
+    if (!song) {
+        return res.status(404).json({ error: 'File not found bro!' });
+    }
+
+    res.status(200).json(song);
+     
+})
   
-router.get("/:name", (req, res) => {
-    const filename = req.params.name;
-    const song = songList.find(song => song.name === filename);
-    console.log(filename);
+// download individual song
+router.get("/download/:songId", (req, res) => {
+    const songId = req.params.songId;
+    const songList = getSongs();
+    console.log(songId);
+
+    const song = songList.find(song => song.id === songId);
 
     if (!song) {
         return res.status(404).json({ error: 'File not found hoe!' });
     }
 
     try {
-        res.download(song.path, filename);
-        console.log(song.path);
-        console.log(filename)
+        res.download(`./public/songs/${songId}.wav`);
+        console.log("heythere");
         console.log("success");
     } catch (error) {
         console.error(error);
@@ -40,5 +55,24 @@ router.get("/:name", (req, res) => {
         return res.status(500).json({error: 'Error while downloading song'});
     }
 });
+
+
+
+
+// read song data
+function getSongs() {
+    const songsData = fs.readFileSync("data/songs.json");
+    return JSON.parse(songsData);
+  }
+
+function getAllSongs() {
+    const songs = getSongs();
+
+    const songList = songs.map(({id, title, song, image }) => {
+        return {id, title, song, image};
+    })
+
+    res.status(200).json(songList);
+}
 
 module.exports = router; 

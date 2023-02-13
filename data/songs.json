@@ -1,56 +1,65 @@
 [
   {
     "id": "1",
-    "title": "1",
-    "song": "../public/songs/1.wav",
-    "image": "../public/images/1.jpeg"
+    "title": "1  ",
+    "song": "/public/songs/1.wav",
+    "image": "http://localhost:8080/images/2.jpeg",
+    "alt": "ambient blue and black graphics"
   },
   {
     "id": "2",
     "title": "2",
     "song": "../public/songs/2.wav",
-    "image": "../public/images/2.jpeg"
-  },
-  {
-    "id": "2",
-    "title": "3",
-    "song": "../public/songs/1.wav",
-    "image": "../public/images/1.jpeg"
+    "image": "http://localhost:8080/images/23.jpeg",
+    "alt": "should I be worried?"
   },
   {
     "id": "3",
+    "title": "Hoop Dream Catcher",
+    "song": "../public/songs/1.wav",
+    "image": "http://localhost:8080/images/5.jpeg",
+    "alt": "Basketball rim and mesh with a moon in the middle"
+  },
+  {
+    "id": "4",
     "title": "4",
     "song": "../public/songs/4.wav",
-    "image": "../public/images/4.jpeg"
+    "image": "http://localhost:8080/images/4.png",
+    "alt": "graphic of shadow"
   },
   {
     "id": "5",
     "title": "5",
     "song": "../public/songs/5.wav",
-    "image": "../public/images/5.jpeg"
+    "image": "http://localhost:8080/images/21.jpeg",
+    "alt": "friends at dance club"
   },
   {
     "id": "6",
     "title": "6",
     "song": "../public/songs/6.wav",
-    "image": "../public/images/6.jpeg"
+    "image": "http://localhost:8080/images/15.jpeg",
+    "alt": "plan tree blue sky brackdrop"
   },
   {
     "id": "7",
     "title": "7",
     "song": "../public/songs/7.wav",
-    "image": "../public/images/7.jpeg"
+    "image": "http://localhost:8080/images/12.jpeg",
+    "alt": "chess border hanging sideways"
   },
   {
     "id": "8",
     "title": "8",
     "song": "../public/songs/8.wav",
-    "image": "../public/images/8.jpeg"
+    "image": "http://localhost:8080/images/17.jpeg",
+    "alt": "power lines in winter"
   },
   {
     "id": "9",
     "title": "9",
     "song": "../public/songs/9.wav",
-    "image": "../public/images/9.jpeg"
+    "image": "http://localhost:8080/images/25.jpeg",
+    "alt": "spy cam blue"
   }
 ]

@@ -5,6 +5,7 @@ const cors = require('cors');
 require('dotenv').config();
 app.use(cors()); // enable CORS - do I need to make this only available for my client?
 app.use(express.json()); // allow api to accept a JSON body via POST / PATCH / ETC
+
 app.use(express.static("./public" )); // serve pictures for gallery, and songs? -- public isn't in the url
 
 const PORT = process.env.PORT || 5050;
