@@ -11,8 +11,8 @@ router.use(express.json());
 router.get('/', (req, res) => {
     const songs = getSongs();
 
-    const songList = songs.map(({id, title, song, image,alt }) => {
-        return {id, title, song, image, alt};
+    const songList = songs.map(({id, title, song, image,alt, author, vibes, lyrics, download }) => {
+        return {id, title, song, image, alt, author, vibes, lyrics, download};
     })
 
     res.status(200).json(songList);
@@ -47,16 +47,12 @@ router.get("/download/:songId", (req, res) => {
 
     try {
         res.download(`./public/songs/${songId}.wav`);
-        console.log("heythere");
         console.log("success");
     } catch (error) {
         console.error(error);
-        console.log("didnt work");
         return res.status(500).json({error: 'Error while downloading song'});
     }
 });
-
-
 
 
 // read song data

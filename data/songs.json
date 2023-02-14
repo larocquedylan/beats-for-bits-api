@@ -1,65 +1,101 @@
 [
   {
     "id": "1",
-    "title": "1  ",
+    "title": "1.22 G4",
+    "author": "Spoken by Dylan",
+    "vibes": "Nostalgic mumbles",
+    "lyrics": "In a beautiful era, unaware of where I fit in, cosmically significant, knowing each breath a gift, cannot let my light dim, got so much more that I could give, got to let it all in, put it out, find some new routes, break the trail, set sail, on the odssey, found everything I need was inside of me, whats the odds I see, I gotta see, for my metis blood is seep deep, I gotta see",
     "song": "/public/songs/1.wav",
     "image": "http://localhost:8080/images/2.jpeg",
-    "alt": "ambient blue and black graphics"
+    "alt": "ambient blue and black graphics",
+    "download": "https://legend.lnbits.com/paywall/7E83BprXjMALC7L7oiv8eA"
   },
   {
     "id": "2",
-    "title": "2",
+    "title": "1.22 O2",
+    "author": "Genes",
+    "vibes": "Good for coding",
+    "lyrics": "none",
     "song": "../public/songs/2.wav",
     "image": "http://localhost:8080/images/23.jpeg",
-    "alt": "should I be worried?"
+    "alt": "should I be worried?",
+    "download": "https://legend.lnbits.com/paywall/ULHvBBWbytAnqdLhihkwuH"
   },
   {
     "id": "3",
-    "title": "Hoop Dream Catcher",
-    "song": "../public/songs/1.wav",
+    "title": "1.22 S1",
+    "author": "Spoken by Dylan",
+    "vibes": "The blues",
+    "lyrics": "I let my eyes dry themselves, I won't worry, grew up pretty fast so the past kind of blurry, never catching breaths, I was always in a hurry, I thought, for surely, I know what is worthy, now my age got my thinking about them perly, gates, no windows inside this cage, I can't see through, inside I am blue, these ancient pains got my bruised, and vexed, factory of stress that weighing on my neck, I cannot stargaze, stuck between larocque and hard place, my heart aches, see trails that I could blaze, but chasing change, got my locked in these chains, its just one of them days, I cannot break away, blues mixed with greys, green its ok, and my sorrow disipates once I stop watching watching. Time is brief so I take the heed, soothing every weep, quieting my gried, not running for relief, I face it. It helps me find peace, all this pain turns to pleasant memories, my worries out to sea. Each day is a gift that I get to recieve. ",
+    "song": "/public/songs/3.wav",
     "image": "http://localhost:8080/images/5.jpeg",
-    "alt": "Basketball rim and mesh with a moon in the middle"
+    "alt": "Basketball rim and mesh with a moon in the middle",
+    "download": "https://legend.lnbits.com/paywall/MG5jBPdumtQBhrTNyif98B"
   },
   {
     "id": "4",
-    "title": "4",
+    "title": "2.6.23",
+    "author": "Genes",
+    "vibes": "jazz cigarettes",
+    "lyrics": "whatever you like!",
     "song": "../public/songs/4.wav",
     "image": "http://localhost:8080/images/4.png",
-    "alt": "graphic of shadow"
+    "alt": "graphic of shadow",
+    "download": "https://legend.lnbits.com/paywall/ayunDywdhh4DtNEaXArrgW"
   },
   {
     "id": "5",
-    "title": "5",
+    "title": "OctoberC",
+    "author": "Genes",
+    "vibes": "Loop & coding",
+    "lyrics": "None",
     "song": "../public/songs/5.wav",
     "image": "http://localhost:8080/images/21.jpeg",
-    "alt": "friends at dance club"
+    "alt": "friends at dance club",
+    "download": "https://legend.lnbits.com/paywall/nQiyqBdLfiATfemgW3P36h"
   },
   {
     "id": "6",
-    "title": "6",
+    "title": "3.22 J1",
+    "author": "Genes",
+    "vibes": "Adult things",
+    "lyrics": "Girl, I'll put it down with care, with all the love we share, to shine with this light on you",
     "song": "../public/songs/6.wav",
     "image": "http://localhost:8080/images/15.jpeg",
-    "alt": "plan tree blue sky brackdrop"
+    "alt": "plan tree blue sky brackdrop",
+    "download": "https://legend.lnbits.com/paywall/Sz7e65LcWS2qw53qLsdsmD"
   },
   {
     "id": "7",
-    "title": "7",
+    "title": "11.21 U'1",
+    "author": "Spoken by Dylan",
+    "vibes": "Thinking",
+    "lyrics": "Solitudes a gift isn't it, in my heart the sun it always sets upon the north plains, ancient pains, engulfed in silence, one with the darkness, I been gathering emptiness, insde these two hands, I don't know what the fuck to do man... ",
     "song": "../public/songs/7.wav",
-    "image": "http://localhost:8080/images/12.jpeg",
-    "alt": "chess border hanging sideways"
+    "image": "http://localhost:8080/images/17.jpeg",
+    "alt": "power lines in winter",
+    "download": "https://legend.lnbits.com/paywall/RotV8XsvxLdVSJFcKtfrmk"
   },
   {
     "id": "8",
-    "title": "8",
+    "title": "July 7 c1",
+    "author": "Spoken by Dylan",
+    "vibes": "Just being silly",
+    "lyrics": "My days are running into one another, im from the mother, land, called turtle island, my top 3 goes: dylan, dylan, dylan. I'm the original man, I wear the heart on skin, or in my hands, I love my pecans, the moon is where I rest, I gather emptiness, my parents is the best, I used the lip medex blistex, when my lips are stressed, but that is often chose to say less do some brisk walking, no more slick talking, my wrist barking, but its just a casio, I aint that flashy bro",
     "song": "../public/songs/8.wav",
-    "image": "http://localhost:8080/images/17.jpeg",
-    "alt": "power lines in winter"
+    "image": "http://localhost:8080/images/12.jpeg",
+    "alt": "Chess board with pieces on it suspended on a wall",
+    "download": "https://legend.lnbits.com/paywall/T4FxhSfbLMnSDwwwt5DjdJ"
   },
   {
     "id": "9",
-    "title": "9",
+    "title": "May25",
+    "author": "Spoken by Dylan",
+    "vibes": "a love song!",
+    "lyrics": "(i think thats just so fkn fly, how you decide) Probably never going to meet another like you, how can I tell you? Never cared for all the talking and the flossing, all that fashion, ya you know that thats capping (cap), you really question your time, how you spent it, what you feeding ot your mind, the nutrients inside, you decide and I think thats just so fkn fly, how you decide",
     "song": "../public/songs/9.wav",
     "image": "http://localhost:8080/images/25.jpeg",
-    "alt": "spy cam blue"
+    "alt": "spy cam blue",
+    "download": "https://legend.lnbits.com/paywall/UskAHNHTWX2o2McJQpHpRU"
   }
 ]
