@@ -3,7 +3,6 @@ const res = require("express/lib/response");
 const router = express.Router();
 
 const fs = require('fs');
-const path = require('path');
 
 router.use(express.json());
 
