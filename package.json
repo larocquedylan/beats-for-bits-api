@@ -8,10 +8,6 @@
     "start": "node ./dist/index.js",
     "test": "jest"
   },
-  "jest": {
-    "preset": "ts-jest",
-    "testEnvironment": "node"
-  },
   "author": "dillybar",
   "license": "ISC",
   "dependencies": {
