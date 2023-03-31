@@ -21,7 +21,7 @@ describe('Song routes', () => {
   });
 
   it('GET /songs/:id - should return a specific song', async () => {
-    const validId = '1'; // Replace this with a valid song ID from your data
+    const validId = '1';
     const res = await request(app).get(`/songs/${validId}`);
 
     expect(res.status).toBe(200);
@@ -34,7 +34,7 @@ describe('Song routes', () => {
   });
 
   it('GET /songs/download/:songId - should download a song', async () => {
-    const validId = '1'; // Replace this with a valid song ID from your data
+    const validId = '1';
     const res = await request(app).get(`/songs/download/${validId}`);
 
     expect(res.status).toBe(200);
@@ -47,7 +47,7 @@ describe('Song routes', () => {
   });
 
   it('GET /songs/stream/:songId - should stream a song', async () => {
-    const validId = '1'; // Replace this with a valid song ID from your data
+    const validId = '1';
     const res = await request(app)
       .get(`/songs/stream/${validId}`)
       .set('Range', 'bytes=0-');
