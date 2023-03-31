@@ -14,10 +14,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const supertest_1 = __importDefault(require("supertest"));
 const express_1 = __importDefault(require("express"));
-const songRoutes_1 = __importDefault(require("../routes/songRoutes"));
+const songsRoutes_1 = __importDefault(require("../routes/songsRoutes"));
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
-app.use('/songs', songRoutes_1.default);
+app.use('/songs', songsRoutes_1.default);
 describe('Song routes', () => {
     it('GET /songs - should return all songs', () => __awaiter(void 0, void 0, void 0, function* () {
         const res = yield (0, supertest_1.default)(app).get('/songs');

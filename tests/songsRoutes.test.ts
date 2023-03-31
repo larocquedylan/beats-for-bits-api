@@ -1,7 +1,6 @@
 import request from 'supertest';
 import express, { Express } from 'express';
-// import songRoutes from '../routes/songRoutes';
-// import { song } from '../interfaces/songs';
+import songRoutes from '../routes/songsRoutes';
 
 const app: Express = express();
 app.use(express.json());
