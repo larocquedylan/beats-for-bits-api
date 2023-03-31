@@ -13,7 +13,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const response_1 = __importDefault(require("express/lib/response"));
+// import res from 'express/lib/response';
 const fs_1 = __importDefault(require("fs"));
 const router = express_1.default.Router();
 router.use(express_1.default.json());
@@ -101,13 +101,14 @@ function getSongs() {
     });
 }
 // get all songs
-function getAllSongs() {
-    return __awaiter(this, void 0, void 0, function* () {
-        const songs = yield getSongs();
-        const songList = songs.map(({ id, title, song, image }) => {
-            return { id, title, song, image };
-        });
-        response_1.default.status(200).json(songList);
-    });
+// async function getAllSongs() {
+//   const songs = await getSongs();
+//   const songList = songs.map(({ id, title, song, image }: Song) => {
+//     return { id, title, song, image };
+//   });
+//   res.status(200).json(songList);
+// }
+function handleError(res, statusCode, message) {
+    res.status(statusCode).json({ error: message });
 }
 exports.default = router;
