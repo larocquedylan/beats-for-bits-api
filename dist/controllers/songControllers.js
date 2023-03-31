@@ -33,6 +33,7 @@ const getSongById = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     res.status(200).json(song);
 });
 exports.getSongById = getSongById;
+// Download Song Controller
 const downloadSong = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const songId = req.params.songId;
     const songList = yield getSongs();
@@ -40,11 +41,13 @@ const downloadSong = (req, res) => __awaiter(void 0, void 0, void 0, function* (
     if (!song) {
         return handleError(res, 404, 'File not found bro!');
     }
-    res.download(`./public/songs/${song.song}`, song.song, (err) => {
-        if (err) {
-            return handleError(res, 500, 'Something went wrong');
-        }
-    });
+    try {
+        res.download(`./public/songs/${songId}.wav`);
+    }
+    catch (error) {
+        console.error(error);
+        return res.status(500).json({ error: 'Error while downloading song' });
+    }
 });
 exports.downloadSong = downloadSong;
 const streamSong = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
@@ -95,6 +98,6 @@ function handleError(res, statusCode, message) {
 function getSongs() {
     return __awaiter(this, void 0, void 0, function* () {
         const songsData = yield fs_1.default.promises.readFile('data/songs.json');
-        return JSON.parse(songsData);
+        return JSON.parse(songsData.toString());
     });
 }

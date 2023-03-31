@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import fs from 'fs';
 import { Song } from '../interfaces/songs';
 
+// Get All Songs Controller
 export const getAllSongs = async (req: Request, res: Response) => {
   const songs = await getSongs();
 
@@ -24,6 +25,7 @@ export const getAllSongs = async (req: Request, res: Response) => {
   res.status(200).json(songList);
 };
 
+// Get Song By Id Controller
 export const getSongById = async (req: Request, res: Response) => {
   const songs = await getSongs();
   const songId = req.params.id;
@@ -38,6 +40,7 @@ export const getSongById = async (req: Request, res: Response) => {
   res.status(200).json(song);
 };
 
+// Download Song Controller
 export const downloadSong = async (req: Request, res: Response) => {
   const songId = req.params.songId;
   const songList = await getSongs();
@@ -48,13 +51,15 @@ export const downloadSong = async (req: Request, res: Response) => {
     return handleError(res, 404, 'File not found bro!');
   }
 
-  res.download(`./public/songs/${song.song}`, song.song, (err) => {
-    if (err) {
-      return handleError(res, 500, 'Something went wrong');
-    }
-  });
+  try {
+    res.download(`./public/songs/${songId}.wav`);
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({ error: 'Error while downloading song' });
+  }
 };
 
+// Stream Song Controller
 export const streamSong = async (req: Request, res: Response) => {
   const songId = req.params.songId;
   const songList = await getSongs();
@@ -103,11 +108,13 @@ export const streamSong = async (req: Request, res: Response) => {
   }
 };
 
+// Error Handler
 function handleError(res: Response, statusCode: number, message: string) {
   res.status(statusCode).json({ error: message });
 }
 
+// Get songs from JSON file
 async function getSongs() {
   const songsData = await fs.promises.readFile('data/songs.json');
-  return JSON.parse(songsData);
+  return JSON.parse(songsData.toString());
 }
