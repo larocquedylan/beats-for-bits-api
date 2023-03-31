@@ -1,22 +1,11 @@
 import express, { Request, Response, Router } from 'express';
-import res from 'express/lib/response';
+// import res from 'express/lib/response';
 import fs from 'fs';
+import { Song } from '../interfaces/songs';
 
 const router: Router = express.Router();
 
 router.use(express.json());
-
-interface Song {
-  id: string;
-  title: string;
-  song: string;
-  image: string;
-  alt: string;
-  author: string;
-  vibes: string;
-  lyrics: string;
-  download: string;
-}
 
 // get all songs endpoint for gallery
 router.get('/', async (req: Request, res: Response) => {
@@ -130,15 +119,15 @@ async function getSongs() {
 }
 
 // get all songs
-async function getAllSongs() {
-  const songs = await getSongs();
+// async function getAllSongs() {
+//   const songs = await getSongs();
 
-  const songList = songs.map(({ id, title, song, image }: Song) => {
-    return { id, title, song, image };
-  });
+//   const songList = songs.map(({ id, title, song, image }: Song) => {
+//     return { id, title, song, image };
+//   });
 
-  res.status(200).json(songList);
-}
+//   res.status(200).json(songList);
+// }
 
 function handleError(res: Response, statusCode: number, message: string) {
   res.status(statusCode).json({ error: message });
